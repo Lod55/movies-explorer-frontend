@@ -1,0 +1,24 @@
+.social-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-nav__link {
+    display: block;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+    padding-right: 20px;
+    transition: opacity .3s ease-in;
+}
+
+.social-nav__link:hover {
+    opacity: 0.7;
+}
+
+.social-nav__link:last-of-type {
+    padding-right: 0;
+}
