@@ -1,0 +1,37 @@
+.auth-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.auth-nav__link {
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    padding-right: 30px;
+    transition: opacity .3s ease-in;
+}
+
+.auth-nav__link:hover {
+    opacity: 0.7;
+}
+
+.auth-nav__link:last-of-type {
+    padding-right: 0;
+}
+
+.auth-nav__button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 79px;
+    height: 32px;
+    background: #3DDC84;
+    border-radius: 3px;
+    outline-style: none;
+    font-weight: 500;
+    cursor: pointer;
+}
