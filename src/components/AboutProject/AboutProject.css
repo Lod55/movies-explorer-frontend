@@ -31,12 +31,13 @@
 .about-project__diagrams {
     display: grid;
     grid-template-columns: 228px 1fr;
-    grid-template-rows: 36px 47px;
+    grid-template-rows: minmax(36px, max-content) minmax(47px, max-content);
     grid-auto-rows: 36px;
-    margin-bottom: 90px;
+    margin-bottom: 110px;
 }
 
 .about-project__diagram {
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,6 +59,6 @@
 }
 
 .about-project__diagram_caption {
-    color:  #8B8B8B;
+    color: #8B8B8B;
     font-weight: 500;
 }

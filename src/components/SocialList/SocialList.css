@@ -1,0 +1,32 @@
+.social-nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-nav__item {
+    padding-right: 20px;
+}
+
+.social-nav__item:last-of-type {
+    padding-right: 0;
+}
+
+.social-nav__link {
+    display: block;
+    max-width: 200px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+    transition: opacity .3s ease-in;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.social-nav__link:hover {
+    opacity: 0.7;
+}

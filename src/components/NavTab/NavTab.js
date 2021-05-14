@@ -1,21 +1,19 @@
 import './NavTab.css';
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { promoNav } from "../../utils/constants";
 
 const NavTab = () => {
   return (
     <nav className={'tab-nav'}>
-      <NavLink to="/" className="tab-nav__link">
-        <button className={'tab-nav__button'}>О проекте</button>
-      </NavLink>
-
-      <NavLink to="/" className="tab-nav__link">
-        <button className={'tab-nav__button'}>Технологии</button>
-      </NavLink>
-
-      <NavLink to="/" className="tab-nav__link">
-        <button className={'tab-nav__button'}>Студент</button>
-      </NavLink>
+      <ul className={'tab-nav__list'}>
+        {promoNav.map((item, index) => (
+          <li className={'tab-nav__item'} key={index}>
+            <a href={item.link} className="tab-nav__link">
+              {item.text}
+            </a>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };

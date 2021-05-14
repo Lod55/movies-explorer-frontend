@@ -1,14 +1,14 @@
 import './Footer.css';
 import React from 'react';
-import SocialNav from "../SocialNav/SocialNav";
+import SocialList from "../SocialList/SocialList";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <p className={'footer__text'}>Учебный проект Яндекс.Практикум х BeatFilm.</p>
       <div className={'footer__container'}>
-        <p className="footer__copyright">&copy; {new Date().getFullYear()}</p>
-        <SocialNav/>
+        <p className="footer__copyright">&copy; {new Date().getFullYear()} Lod55</p>
+        <SocialList/>
       </div>
     </footer>
   );

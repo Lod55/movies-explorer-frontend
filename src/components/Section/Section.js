@@ -6,12 +6,12 @@ const Section = (props) => {
     children,
     classSection = '',
     classSectionTitle = '',
-    sectionTitle= '',
+    sectionTitle = '',
     sectionId = '',
   } = props;
 
   return (
-    <section className={`section ${classSection}`} id={sectionId}>
+    <section className={`section ${classSection}`}  id={sectionId}>
 
       <h2 className={`section__title ${classSectionTitle}`}>
         {sectionTitle}
