@@ -8,7 +8,7 @@ function SearchForm() {
     <section className="search">
       <form className="search-form">
         <div className="search-form__input-container">
-          <input className="search-form__input" placeholder="Фильм" />
+          <input className="search-form__input" placeholder="Фильм" required />
           <button className="search-form__button" type="submit" />
         </div>
         <Error className="search-form__error" id="search-form-error" />
