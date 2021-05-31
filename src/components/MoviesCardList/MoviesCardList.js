@@ -1,24 +1,10 @@
 import "./MoviesCardList.css";
 import React from "react";
 import MoviesCard from "../MoviesCard/MoviesCard";
+import { defaultMovies } from "../../utils/constants";
 
 function MoviesCardList(props) {
   const { listType } = props;
-
-  const generateId = () => {
-    return Math.random().toString(36).substr(2, 9);
-  };
-
-  const defaultMovies = [
-    { id: generateId(), saved: true },
-    { id: generateId(), saved: false },
-    { id: generateId(), saved: false },
-    { id: generateId(), saved: false },
-    { id: generateId(), saved: true },
-    { id: generateId(), saved: true },
-    { id: generateId(), saved: false },
-    { id: generateId(), saved: false },
-  ];
 
   return (
     <section className="movies">

@@ -25,8 +25,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predeploy": "npm run build",
+    "deploy": "scp -r ./build/* movies-lod55@84.201.135.44:/home/movies-lod55/movies-explorer-api/public"
   },
   "eslintConfig": {
     "extends": [
