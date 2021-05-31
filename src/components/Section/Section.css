@@ -1,14 +1,30 @@
 .section {
-    width: 100%;
-    padding: 100px 0 0 0;
+  padding: 100px 0 0 0;
 }
 
 .section__title {
-    margin: 0;
-    padding: 0 0 23px 0;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 27px;
-    letter-spacing: -0.04em;
-    border-bottom: 1px solid #DADADA;
+  margin: 0;
+  padding: 0 0 23px 0;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  border-bottom: 1px solid #dadada;
+}
+
+@media screen and (max-width: 770px) {
+  .section {
+    padding-top: 90px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section {
+    padding-top: 70px;
+  }
+
+  .section__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }

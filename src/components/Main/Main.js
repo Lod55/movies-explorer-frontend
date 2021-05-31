@@ -1,26 +1,26 @@
-import './Main.css';
-import React from 'react';
-import Header from '../Header/Header';
+import "./Main.css";
+import React from "react";
+import Header from "../Header/Header";
 import Content from "../Content/Content";
-import Promo from '../Promo/Promo';
-import Footer from '../Footer/Footer';
+import Promo from "../Promo/Promo";
+import Footer from "../Footer/Footer";
 import AboutProject from "../AboutProject/AboutProject";
 import Techs from "../Techs/Techs";
 import AboutMe from "../AboutMe/AboutMe";
 
-const Main = () => {
+const Main = (props) => {
   return (
     <>
-      <Header/>
+      <Header />
 
       <Content>
-        <Promo/>
-        <AboutProject/>
-        <Techs/>
-        <AboutMe/>
+        <Promo />
+        <AboutProject />
+        <Techs />
+        <AboutMe />
       </Content>
 
-      <Footer/>
+      <Footer />
     </>
   );
 };

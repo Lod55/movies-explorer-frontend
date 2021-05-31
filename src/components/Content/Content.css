@@ -1,8 +1,8 @@
 .content {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    width: calc(100% - 140px);
-    margin: 0 auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 74px auto 0;
 }

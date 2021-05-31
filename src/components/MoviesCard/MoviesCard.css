@@ -1,0 +1,98 @@
+.movie {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 44px;
+  grid-template-rows: 1fr 1fr 203px;
+  grid-template-areas:
+    "title button"
+    "time button"
+    "photo photo";
+  background-color: #222222;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.movie__title {
+  grid-area: title;
+  margin: 0 0 0 14px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  align-self: end;
+}
+
+.movie__time {
+  grid-area: time;
+  margin: 0 0 0 14px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8b8b8b;
+  align-self: center;
+}
+
+.movie__button-save {
+  background: url("../../images/movie-button-grey.svg") no-repeat center center;
+  margin: 0;
+  padding: 0;
+  grid-area: button;
+  border-radius: 36px;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  background-color: #313131;
+  outline-style: none;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.movie__button-save_active {
+  background: url("../../images/movie-button-white.svg") no-repeat center center;
+  background-color: #3ddc84;
+}
+
+.movie__button-save:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+
+.movie__button-delete {
+  background: url("../../images/movie-button-delete.svg") no-repeat center
+    center;
+  margin: 0;
+  padding: 0;
+  grid-area: button;
+  border-radius: 36px;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  background-color: #313131;
+  outline-style: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+}
+
+.movie__button-delete:hover {
+  opacity: 0.8;
+}
+
+.movie__img {
+  grid-area: photo;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 770px) {
+  .movie {
+    grid-template-rows: 1fr 1fr 190px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .movie {
+    grid-template-rows: 1fr 1fr 168px;
+  }
+}

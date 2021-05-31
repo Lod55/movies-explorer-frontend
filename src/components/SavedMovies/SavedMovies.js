@@ -1,9 +1,19 @@
-import './SavedMovies.css';
-import React from 'react';
+import React from "react";
+import "./SavedMovies.css";
+import Header from "../Header/Header";
+import Content from "../Content/Content";
+import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import Footer from "../Footer/Footer";
 
 const SavedMovies = () => {
   return (
-    <p>Сохраненные Фильмы</p>
+    <>
+      <Header />
+      <Content>
+        <MoviesCardList listType="save" />
+      </Content>
+      <Footer />
+    </>
   );
 };
 
