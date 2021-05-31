@@ -1,0 +1,107 @@
+.search-form__checkbox-container {
+  display: flex;
+  margin: 0 20px 10px 0;
+}
+
+.search-form__checkbox-container:last-of-type {
+  margin: 0 0 10px 0;
+}
+
+.search-form__checkbox-label {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  margin: 0 15px 0 0;
+}
+
+.search-form__checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.search-form__checkbox-switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #343434;
+  transition: 0.4s;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.search-form__checkbox-switch:hover {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.search-form__checkbox-switch:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: #a0a0a0;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.search-form__checkbox:checked + .search-form__checkbox-switch {
+  background-color: #3ddc84;
+}
+
+.search-form__checkbox:checked + .search-form__checkbox-switch:before {
+  background-color: #ffffff;
+  transform: translateX(16px);
+}
+
+.search-form__checkbox-text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+
+.search-form__checkbox-text:last-of-type {
+  margin: 0;
+}
+
+@media screen and (max-width: 770px) {
+  .search-form__checkbox-container {
+    flex-direction: row-reverse;
+    margin: 0 0 10px 20px;
+  }
+
+  .search-form__checkbox-container:last-of-type {
+    margin: 0 0 10px 20px;
+  }
+
+  .search-form__checkbox-label {
+    margin: 0 0 0 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .search-form__checkbox-container {
+    flex-direction: row-reverse;
+    margin: 0 0 15px 0;
+  }
+
+  .search-form__checkbox-container:last-of-type {
+    margin: 0;
+  }
+
+  .search-form__checkbox-label {
+    margin: 0 0 0 13px;
+  }
+
+  .search-form__checkbox-text {
+    font-size: 11px;
+  }
+}

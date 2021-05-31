@@ -1,0 +1,129 @@
+.about-me {
+  width: calc(100% - 140px);
+}
+
+.about-me__block {
+  display: flex;
+  justify-content: space-between;
+  margin: 66px 0 100px 0;
+}
+
+.about-me__signature {
+  flex: 0 0 52.6%;
+}
+
+.about-me__citation {
+  margin: 0;
+}
+
+.about-me__quote-author {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: -0.04em;
+}
+
+.about-me__quote-subline {
+  margin: 18px 0 26px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.about-me__quote {
+  margin: 0 0 99px 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.about-me__container-img {
+  flex: 0 0 23.6%;
+  position: relative;
+  overflow: hidden;
+  max-height: 327px;
+  min-height: 250px;
+}
+
+.about-me__avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 966px) {
+  .about-me__block {
+    margin-bottom: 91px;
+  }
+
+  .about-me__quote-author {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .about-me__quote-subline {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .about-me__quote {
+    margin-bottom: 87px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .about-me__container-img {
+    flex: 0 0 40.8%;
+    max-height: 307px;
+    min-height: 230px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .about-me {
+    width: calc(100% - 28px);
+  }
+
+  .about-me__block {
+    flex-direction: column-reverse;
+    margin: 60px 0 69px;
+  }
+
+  .about-me__container-img {
+    min-height: 550px;
+  }
+
+  .about-me__citation {
+    margin: 40px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-me__container-img {
+    min-height: 352px;
+  }
+
+  .about-me__quote-author {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .about-me__quote-subline {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 20px 0 20px 0;
+  }
+
+  .about-me__quote {
+    margin-bottom: 40px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
