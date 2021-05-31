@@ -30,9 +30,17 @@
   border-bottom: 1px solid #424242;
 }
 
+.profile__input-container:focus-within {
+  border-bottom: 1px solid #4285f4;
+}
+
 .profile__input-container:last-of-type {
   border: 0;
   margin: 0 0 220px 0;
+}
+
+.profile__input-container:focus-within:last-of-type {
+  border-bottom: 1px solid #4285f4;
 }
 
 .profile__input {
