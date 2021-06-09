@@ -132,7 +132,7 @@ const App = () => {
     try {
       const updateUser = await api.updateUser({ name, email });
       setCurrentUser(updateUser);
-      showSuccess(updateUser.massage);
+      showSuccess(updateUser.message);
     } catch (err) {
       showError(err.message);
     }
