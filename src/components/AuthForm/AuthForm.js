@@ -1,12 +1,12 @@
-import React from "react";
-import "./AuthForm.css";
-import { Link } from "react-router-dom";
-import logo from "../../images/logo.svg";
-import Error from "../Error/Error";
+import React from 'react';
+import './AuthForm.css';
+import { Link } from 'react-router-dom';
+import logo from '../../images/logo.svg';
 
 const AuthForm = (props) => {
-  const { title, formName, children, textButton, text, pathLink, textLink } =
+  const { title, formName, children, textButton, text, pathLink, textLink, onSubmit, isValid } =
     props;
+
   return (
     <section className="auth-form">
       <Link to="/" className="auth-form__link-logo">
@@ -18,18 +18,16 @@ const AuthForm = (props) => {
         name={`form-${formName}`}
         id={`form-${formName}`}
         className="auth-form__form"
+        onSubmit={onSubmit}
       >
         {children}
-        <Error
-          className="auth-form__error"
-          id={`submit-${formName}-error`}
-          text=""
-        />
-        <button className="auth-form__button">{textButton}</button>
+        <button className={`auth-form__button ${!isValid ? 'auth-form__button_invalid' : ''}`}>
+          {textButton}
+        </button>
       </form>
 
       <p className="auth-form__text">
-        {text}{" "}
+        {text}{' '}
         <Link to={pathLink} className="auth-form__link">
           {textLink}
         </Link>
