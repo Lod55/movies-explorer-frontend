@@ -40,7 +40,7 @@
 
 .search-form__checkbox-switch:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 16px;
   width: 16px;
   top: 2px;
