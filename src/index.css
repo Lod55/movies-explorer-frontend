@@ -1,7 +1,7 @@
 /* Normalize.css */
-@import url("./vendor/normalize.css");
+@import url('./vendor/normalize.css');
 /* Fonts */
-@import url("./vendor/fonts/fonts.css");
+@import url('./vendor/fonts/fonts.css');
 
 body {
   background-color: #202020;
@@ -9,7 +9,7 @@ body {
 }
 
 #root {
-  font-family: "Inter", "Helvetica Neue", "Arial", sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
@@ -19,4 +19,12 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #ffffff;
+  box-shadow: 0 0 0 30px #202020 inset !important;
 }
