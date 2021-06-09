@@ -1,7 +1,6 @@
 import { apiFetch } from './apiFetch';
 
-// const BASE_URL = 'https://api.app-movies.lod55.nomoredomains.icu';
-const BASE_URL = 'http://localhost:3005';
+const BASE_URL = 'https://api.app-movies.lod55.nomoredomains.icu';
 
 // ---GET
 export const getUser = () =>
