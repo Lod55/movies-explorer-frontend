@@ -1,13 +1,13 @@
-import React from "react";
-import "./Section.css";
+import React from 'react';
+import './Section.css';
 
 const Section = (props) => {
   const {
     children,
-    classSection = "",
-    classSectionTitle = "",
-    sectionTitle = "",
-    sectionId = "",
+    classSection = '',
+    classSectionTitle = '',
+    sectionTitle = '',
+    sectionId = '',
   } = props;
 
   return (
