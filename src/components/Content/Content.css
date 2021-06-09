@@ -6,3 +6,8 @@
   width: 100%;
   margin: 74px auto 0;
 }
+
+.content__text {
+  margin: 0;
+  color: #8b8b8b;
+}
