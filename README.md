@@ -1,6 +1,6 @@
 # Movies Explorer Frontend
 
-## Демо
+## Демо (ВРЕМЕННО НЕ РАБОТАЕТ)
 
 - https://app-movies.lod55.nomoredomains.icu/
 - http://app-movies.lod55.nomoredomains.icu/
