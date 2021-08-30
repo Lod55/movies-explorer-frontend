@@ -1,10 +1,5 @@
 # Movies Explorer Frontend
 
-## Демо (ВРЕМЕННО НЕ РАБОТАЕТ)
-
-- https://app-movies.lod55.nomoredomains.icu/
-- http://app-movies.lod55.nomoredomains.icu/
-
 ## Запуск проекта
 
 - `npm run start` — запускает сервер
