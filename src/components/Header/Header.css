@@ -85,7 +85,7 @@
 
   .header__burger::before,
   .header__burger::after {
-    content: "";
+    content: '';
     background-color: #fff;
     position: absolute;
     width: 100%;
@@ -94,7 +94,7 @@
   }
 
   .header__burger span {
-    content: "";
+    content: '';
     background-color: #fff;
     position: absolute;
     width: 100%;

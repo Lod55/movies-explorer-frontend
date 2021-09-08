@@ -1,28 +1,40 @@
-import "./Movies.css";
-import React from "react";
-import Header from "../Header/Header";
-import Content from "../Content/Content";
-import Footer from "../Footer/Footer";
-import SearchForm from "../SearchForm/SearchForm";
-import MoviesCardList from "../MoviesCardList/MoviesCardList";
-import Preloader from "../Preloader/Preloader";
+import './Movies.css';
+import React from 'react';
+import Header from '../Header/Header';
+import Content from '../Content/Content';
+import Footer from '../Footer/Footer';
+import SearchForm from '../SearchForm/SearchForm';
+import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
-const Movies = () => {
-  const defoultLoading = false;
+const Movies = (props) => {
+  const {
+    isLoggedIn,
+    isLoading,
+    isSearching,
+    searchMovies,
+    movies,
+    searchValue,
+    savedMoviesIds,
+    saveMovie,
+    removeMovie,
+  } = props;
+
   return (
     <>
-      <Header />
+      <Header isLoggedIn={isLoggedIn} />
       <Content>
-        <SearchForm />
-        {defoultLoading ? (
-          <Preloader />
+        <SearchForm searchMovies={searchMovies} searchValue={searchValue} />
+        {isSearching ? (
+          <MoviesCardList
+            listType="main"
+            isLoading={isLoading}
+            movies={movies}
+            saveMovie={saveMovie}
+            removeMovie={removeMovie}
+            savedMoviesIds={savedMoviesIds}
+          />
         ) : (
-          <>
-            <MoviesCardList listType="main" />
-            <button className="movies__button" type="button">
-              Ещё
-            </button>
-          </>
+          <p className="content__text">Воспользуйтесь поиском</p>
         )}
       </Content>
       <Footer />

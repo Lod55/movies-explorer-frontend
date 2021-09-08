@@ -1,10 +1,30 @@
-import "./Register.css";
-import React from "react";
-import Content from "../Content/Content";
-import AuthForm from "../AuthForm/AuthForm";
-import Error from "../Error/Error";
+import './Register.css';
+import React from 'react';
 
-function Register() {
+import { useFormWithValidation } from '../../hooks/useFormWithValidation';
+
+import { patterns } from '../../utils/constants';
+
+import Content from '../Content/Content';
+import AuthForm from '../AuthForm/AuthForm';
+import Error from '../Error/Error';
+
+const Register = (props) => {
+  const { onRegister } = props;
+
+  const { values, handleChange, resetFrom, errors, isValid, isValidInputs } =
+    useFormWithValidation();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    onRegister({
+      name: values.nameReg,
+      email: values.emailReg,
+      password: values.passwordReg,
+    }).then(resetFrom);
+  };
+
   return (
     <Content>
       <AuthForm
@@ -14,57 +34,71 @@ function Register() {
         text="Уже зарегистрированы?"
         pathLink="/sign-in"
         textLink="Войти"
+        onSubmit={handleSubmit}
+        isValid={isValid}
       >
-        <label className="auth-form__label" htmlFor="name-register">
+        <label className="auth-form__label" htmlFor="nameReg">
           Имя
         </label>
         <input
-          className="auth-form__input"
+          className={`auth-form__input ${
+            isValidInputs.nameReg ? 'auth-form__input_state_valid' : ''
+          }`}
           type="text"
-          name="name-register"
-          id="name-register"
+          name="nameReg"
+          id="nameReg"
+          minLength="2"
+          maxLength="30"
+          value={values.nameReg || ''}
+          onChange={handleChange}
+          pattern={patterns.name}
           required
         />
-        <Error
-          className="auth-form__error"
-          id="register-input-email-error"
-          text=""
-        />
+        <Error className="auth-form__error" id="register-input-email-error" text={errors.nameReg} />
 
-        <label className="auth-form__label" htmlFor="email-register">
+        <label className="auth-form__label" htmlFor="emailReg">
           E-mail
         </label>
         <input
-          className="auth-form__input"
+          className={`auth-form__input ${
+            isValidInputs.emailReg ? 'auth-form__input_state_valid' : ''
+          }`}
           type="email"
-          name="email-register"
-          id="email-register"
+          name="emailReg"
+          id="emailReg"
+          value={values.emailReg || ''}
+          onChange={handleChange}
+          pattern={patterns.email}
           required
         />
         <Error
           className="auth-form__error"
           id="register-input-email-error"
-          text=""
+          text={errors.emailReg}
         />
 
-        <label className="auth-form__label" htmlFor="password-register">
+        <label className="auth-form__label" htmlFor="passwordReg">
           Пароль
         </label>
         <input
-          className="auth-form__input"
+          className={`auth-form__input ${
+            isValidInputs.passwordReg ? 'auth-form__input_state_valid' : ''
+          }`}
           type="password"
-          name="password-register"
-          id="password-register"
+          name="passwordReg"
+          id="passwordReg"
+          value={values.passwordReg || ''}
+          onChange={handleChange}
           required
         />
         <Error
           className="auth-form__error"
           id="password-input-email-error"
-          text=""
+          text={errors.passwordReg}
         />
       </AuthForm>
     </Content>
   );
-}
+};
 
 export default Register;

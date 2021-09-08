@@ -49,6 +49,10 @@
   padding: 20px;
 }
 
+.preloader_type_page {
+  height: 100vh;
+}
+
 .preloader__container {
   width: 100px;
   height: 100px;
@@ -67,7 +71,7 @@
 
 .preloader__round::after,
 .preloader__round::before {
-  content: "";
+  content: '';
   width: 100px;
   height: 100px;
   position: absolute;

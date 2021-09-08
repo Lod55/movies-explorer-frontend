@@ -5,9 +5,9 @@
   grid-template-columns: 1fr 44px;
   grid-template-rows: 1fr 1fr 203px;
   grid-template-areas:
-    "title button"
-    "time button"
-    "photo photo";
+    'title button'
+    'time button'
+    'photo photo';
   background-color: #222222;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
 }
@@ -32,7 +32,7 @@
 }
 
 .movie__button-save {
-  background: url("../../images/movie-button-grey.svg") no-repeat center center;
+  background: url('../../images/movie-button-grey.svg') no-repeat center center;
   margin: 0;
   padding: 0;
   grid-area: button;
@@ -48,7 +48,7 @@
 }
 
 .movie__button-save_active {
-  background: url("../../images/movie-button-white.svg") no-repeat center center;
+  background: url('../../images/movie-button-white.svg') no-repeat center center;
   background-color: #3ddc84;
 }
 
@@ -58,8 +58,7 @@
 }
 
 .movie__button-delete {
-  background: url("../../images/movie-button-delete.svg") no-repeat center
-    center;
+  background: url('../../images/movie-button-delete.svg') no-repeat center center;
   margin: 0;
   padding: 0;
   grid-area: button;

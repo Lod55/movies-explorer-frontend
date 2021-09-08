@@ -48,12 +48,16 @@
   border-bottom: 1px solid #4285f4;
 }
 
+.auth-form__input_state_valid {
+  border-bottom: 1px solid #528f4b;
+}
+
 .auth-form__error {
   margin: 4px 0 8px 0;
 }
 
 .auth-form__error:last-of-type {
-  margin: 112px 0 4px 0;
+  margin: 4px 0 112px 0;
 }
 
 .auth-form__button {
@@ -73,6 +77,14 @@
 
 .auth-form__button:hover {
   opacity: 0.8;
+}
+
+.auth-form__button_invalid {
+  cursor: default;
+  pointer-events: none;
+  background-color: #202020;
+  color: rgba(139, 139, 139, 0.2);
+  border: 1px solid rgba(139, 139, 139, 0.2);
 }
 
 .auth-form__text {

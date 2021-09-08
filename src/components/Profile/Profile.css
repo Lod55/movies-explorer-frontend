@@ -36,7 +36,14 @@
 
 .profile__input-container:last-of-type {
   border: 0;
-  margin: 0 0 220px 0;
+}
+
+.profile__input-container:focus-within {
+  border-bottom: 1px solid #4285f4;
+}
+
+.profile__input-container_state_valid {
+  border-bottom: 1px solid #528f4b !important;
 }
 
 .profile__input-container:focus-within:last-of-type {
@@ -68,6 +75,14 @@
   text-align: right;
 }
 
+.profile__form__error {
+  text-align: center;
+}
+
+.profile__form__error:last-of-type {
+  margin: 0 0 220px;
+}
+
 .profile__button {
   outline-style: none;
   border: 0;
@@ -82,13 +97,15 @@
   text-align: center;
 }
 
-.profile__link {
-  text-decoration: none;
+.profile__button_type_singout {
   font-weight: 500;
-  font-size: 13px;
-  line-height: 16px;
-  text-align: center;
   color: #ee3465;
+}
+
+.profile__button_invalid {
+  cursor: default;
+  pointer-events: none;
+  color: rgba(139, 139, 139, 0.2);
 }
 
 @media screen and (max-width: 440px) {

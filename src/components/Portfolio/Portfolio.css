@@ -17,8 +17,7 @@
 }
 
 .portfolio__item {
-  background: url("../../images/portfolio-link-arrow.svg") no-repeat right
-    center;
+  background: url('../../images/portfolio-link-arrow.svg') no-repeat right center;
   border-bottom: 1px solid #424242;
   transition: opacity 0.3s ease-in;
   cursor: pointer;
